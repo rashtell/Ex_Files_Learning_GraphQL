@@ -1,0 +1,69 @@
+*******
+Query
+
+{
+  repositoryOwner(login: "eveporcello") {
+    repository(name: "graph-ql-testing") {
+      issues(first:1) {
+        edges {
+          node {
+            id
+            title
+            body
+          }
+        }
+      }
+    }
+  }
+}
+
+
+*********
+Mutation
+
+mutation NewComment($input: AddCommentInput!) {
+  addComment(input: $input) {
+    clientMutationId
+    subject {
+      id
+    }
+  }
+}
+
+*********
+Query Variables
+
+{
+  "input": {
+    "clientMutationId": "14142",
+    "subjectId": "MDU6SXNzdWUyMDkwMTAxOTg=",
+    "body": "Great idea - thanks!"
+  }
+}
+
+***********
+Repository Check
+
+{
+  repositoryOwner(login: "eveporcello") {
+    repository(name: "graph-ql-testing") {
+      issues(first:1) {
+        edges {
+          node {
+            id
+            title
+            body
+            comments(first: 5) {
+              edges {
+                node {
+                  id
+                  body
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

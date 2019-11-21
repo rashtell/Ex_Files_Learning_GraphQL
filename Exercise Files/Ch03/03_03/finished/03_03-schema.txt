@@ -1,0 +1,23 @@
+{
+  __schema {
+    queryType {
+      name
+      description
+      fields {
+        name
+        description
+        isDeprecated
+        deprecationReason
+      }
+    }
+  }
+}
+
+
+{
+  __type(name: "Repository") {
+    kind
+    name
+    description
+  }
+}

@@ -1,0 +1,19 @@
+query FirstNOrgMembers($login: String!, $n:Int!) {
+  organization(login: $login) {
+    id
+    name
+    members(first: $n) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+{
+  "login": "facebook",
+  "n": 5
+}

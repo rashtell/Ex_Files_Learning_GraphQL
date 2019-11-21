@@ -1,0 +1,9 @@
+{
+  viewer {
+    id
+    name
+    isEmployee
+    location
+    databaseId
+  }
+}

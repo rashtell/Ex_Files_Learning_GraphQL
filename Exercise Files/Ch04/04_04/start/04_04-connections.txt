@@ -1,0 +1,17 @@
+ {
+  viewer {
+    id
+    name
+    isEmployee
+    location
+    databaseId
+    repositories(last: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}

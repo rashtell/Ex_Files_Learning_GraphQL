@@ -1,0 +1,39 @@
+First 5 Repositories
+
+{
+  viewer {
+    id
+    name
+    isEmployee
+    location
+    databaseId
+    repositories(first: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+Last 5 Repositories
+
+{
+  viewer {
+    id
+    name
+    isEmployee
+    location
+    databaseId
+    repositories(last: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}

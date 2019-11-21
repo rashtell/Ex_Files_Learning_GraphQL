@@ -1,0 +1,14 @@
+query FirstFiveOrgMembers {
+  organization(login: "facebook") {
+    id
+    name
+    members(first: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}

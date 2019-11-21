@@ -1,0 +1,23 @@
+****
+Mutation
+
+mutation NewReaction($input: AddReactionInput!) {
+  addReaction(input: $input) {
+    reaction {
+      content
+    }
+  }
+}
+
+
+*****
+Input Variables
+
+{
+  "input": {
+    "clientMutationId": "5159212",
+    "subjectId": "MDEyOklzc3VlQ29tbWVudDI4NDcyODQ4NQ==",
+    "content": "HEART"
+    # “content”: “HOORAY”		
+  }
+}

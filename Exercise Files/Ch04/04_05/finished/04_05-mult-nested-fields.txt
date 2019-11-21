@@ -1,0 +1,29 @@
+{
+  repository(owner: "github", name: "opensource.guide") {
+    id
+    name
+    description
+    watchers(first: 5) {
+      edges {
+        node {
+          id
+          name
+          company
+        }
+      }
+    }
+		issues(last: 5) {
+      edges {
+        node {
+          author {
+            avatarURL
+            login
+            path
+          }
+          id
+          title
+        }
+      }
+    }
+  }
+}
